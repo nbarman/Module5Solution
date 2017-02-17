@@ -22,10 +22,11 @@ function SignupController(SignUpService) {
                     signUpCtrl.itemsNotFound = false;
 
                   if(items === 500){
-                      console.log("here");
+                    //  console.log("here");
                     signUpCtrl.itemsNotFound = true;
                   } else{
                           signUpCtrl.found = items;
+                          
                         }
                 //  console.log(  signUpCtrl.found.description);
               });
