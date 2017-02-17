@@ -9,6 +9,7 @@ angular.module('common')
       SignUpService.$inject = ['$http', 'MyApiBasePath'];
       function SignUpService($http, MyApiBasePath) {
         var service = this;
+        var personalInfo = [];
 
               service.getMenuItem = function (short_name) {
                 return $http.get(MyApiBasePath + '/menu_items/'+ short_name +'.json')
@@ -18,6 +19,12 @@ angular.module('common')
                     var status = 500;
                     return status;
                 });
+              };
+
+              service.setPersonalInfo = function(info){
+
+                   Object.assign(personalInfo,info);
+                   console.info("new object", personalInfo);
               };
 
       }

@@ -56,6 +56,9 @@
                                                  ng-model="signUpCtrl.user.favMenuNo"
                                                  required
                                                  ng-maxlength="10">
+                            <span ng-if="registration_form.menuNumber.$error.required && registration_form.menuNumber.$touched">
+                                                          Please enter your favorite menu item number
+                            </span>
                             <span ng-if=" signUpCtrl.itemsNotFound">
                                    No such menu number exists.
                              </span>
@@ -65,7 +68,11 @@
         <button name="submitBtn"
                  ng-disabled="registration_form.$invalid"
                  ng-click="signUpCtrl.submit()">Submit
-        </button>
+        </button><br/>
+
+        <span ng-if="signUpCtrl.submitSuccess">
+               Your information has been saved !
+         </span>
 
   </form>
 </fieldset>
