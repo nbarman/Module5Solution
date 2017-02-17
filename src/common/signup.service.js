@@ -27,5 +27,10 @@ angular.module('common')
                    console.info("new object", personalInfo);
               };
 
+              service.retrievePersonalInfo = function(){
+
+                 return personalInfo;
+              };
+
       }
 })();

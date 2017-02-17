@@ -1,0 +1,34 @@
+
+
+<div class="myInfo">
+
+    <legend> <h2>My Information</h2></legend>
+
+        <div class = "table userInfo">
+                          <ul>
+                              <li>
+                                  First Name : {{myInfoCtrl.personalInfo.fname}}
+                              </li>
+                              <li>
+                                  Last Name : {{myInfoCtrl.personalInfo.lname}}
+                              </li>
+                              <li>
+                                  Email : {{myInfoCtrl.personalInfo.email}}
+                              </li>
+                              <li>
+                                  Phone : {{myInfoCtrl.personalInfo.phone}}
+                              </li>
+                              <li>
+                                  Favorite Item Title : {{myInfoCtrl.personalInfo.title}}
+                              </li>
+                              <li>
+                                  Favorite Item Description : {{myInfoCtrl.personalInfo.itemDescription}}
+                              </li>
+
+                          </ul>
+          </div>
+          <div class="redirect">
+                <p>  Not Signed Up Yet. <a ui-sref="public.signup"> Sign up Now!</a> </p>
+          </div>
+
+</div>
