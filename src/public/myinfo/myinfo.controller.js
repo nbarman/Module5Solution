@@ -8,6 +8,7 @@ MyInfoController.$inject = ['personalInfo'];
 function MyInfoController(personalInfo) {
       var myInfoCtrl = this;
       myInfoCtrl.personalInfo = personalInfo;
+      myInfoCtrl.imgPath =  myInfoCtrl.personalInfo.itemImage;
       var isEmpty = $.isEmptyObject(myInfoCtrl.personalInfo);
       if(isEmpty){
           hideResults();

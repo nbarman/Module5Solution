@@ -3,9 +3,15 @@
 <div class="myInfo">
 
     <legend> <h2>My Information</h2></legend>
-
         <div class = "table userInfo">
+                    <img class="img-responsive" width="250" height="150" ng-src="{{myInfoCtrl.imgPath}}" alt="Img Not Available">
                           <ul>
+                                <li>
+                                    Favorite Item Title : {{myInfoCtrl.personalInfo.title}}
+                                </li>
+                                <li>
+                                    Favorite Item Description : {{myInfoCtrl.personalInfo.itemDescription}}
+                                </li><br/><br/>
                               <li>
                                   First Name : {{myInfoCtrl.personalInfo.fname}}
                               </li>
@@ -18,12 +24,7 @@
                               <li>
                                   Phone : {{myInfoCtrl.personalInfo.phone}}
                               </li>
-                              <li>
-                                  Favorite Item Title : {{myInfoCtrl.personalInfo.title}}
-                              </li>
-                              <li>
-                                  Favorite Item Description : {{myInfoCtrl.personalInfo.itemDescription}}
-                              </li>
+
 
                           </ul>
           </div>

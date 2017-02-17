@@ -4,8 +4,8 @@
 angular.module('public')
 .controller('SignupController', SignupController);
 
-SignupController.$inject = ['SignUpService'];
-function SignupController(SignUpService) {
+SignupController.$inject = ['SignUpService','MyApiBasePath'];
+function SignupController(SignUpService,MyApiBasePath) {
   var signUpCtrl = this;
 
         signUpCtrl.submit = function () {
@@ -22,6 +22,8 @@ function SignupController(SignUpService) {
                     //  console.log("here");
                     signUpCtrl.itemsNotFound = true;
                   } else{
+                          var imgPath = MyApiBasePath+'/images/'+favMenuItem+'.jpg';
+                          console.log("URL", imgPath);
                           signUpCtrl.found = items;
                           var personalInfo ={
                             fname : signUpCtrl.user.firstName,
@@ -30,7 +32,8 @@ function SignupController(SignUpService) {
                             phone : signUpCtrl.user.phone,
                             fmenuitem : favMenuItem,
                             itemDescription : signUpCtrl.found.description,
-                            title: signUpCtrl.found.name
+                            title: signUpCtrl.found.name,
+                            itemImage: imgPath
                           }
                           console.log("Personal info",personalInfo);
                           SignUpService.setPersonalInfo(personalInfo);
